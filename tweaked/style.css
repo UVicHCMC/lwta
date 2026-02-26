@@ -57,3 +57,15 @@ body {
 .s-plus1 {
     font-size: 1.13rem;
 }
+
+/*  Additions for static search. */
+span.ssQueryAndButton{
+    font-size: 1.5rem;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    input, button{
+        font-size: 1.5rem;
+        display: block;
+    }
+}

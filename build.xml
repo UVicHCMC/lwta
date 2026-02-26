@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="lwta" default="all">
+    
+    <description>
+        
+        This is the Ant build file for the LWTA project, which 
+        is a rescue of a 1990s site. Initially we simply remediated
+        the original content, retaining its appearance, and the 
+        first phase of our work involves publishing a version of
+        that. In future, the build will incorporate a modern version
+        of the same content, and will preserve the original as a 
+        curiosity.
+        
+    </description>
+    
+    <property name="echo.separator" value="************************************************"/>
+    
+    <path id="saxon.classpath">
+        <pathelement location="lib/saxon-he-10.jar"/>
+    </path>
+    
+    <target name="preClean">
+        <description>
+            TARGET preClean
+            This removes all existing output from the output folder
+            ready for a fresh build.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Cleaning up before build..."/>
+        <mkdir dir="${basedir}/output"/>
+        <delete includeemptydirs="true">
+            <fileset dir="${basedir}/output">
+                <include name="*"/>
+                <include name="**/*"/>
+            </fileset>
+        </delete>
+    </target>
+    
+    <target name="copyTweakedToOutput">
+        <description>
+            TARGET copyTweakedToOutput
+            This simply copies the content to the output folder
+            where the staticSearch build can be run on it.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Copying tweaked site to output folder..."/>
+        <copy todir="${basedir}/output">
+            <fileset dir="${basedir}/tweaked" includes="**/*"/>
+        </copy>
+    </target>
+    
+    <target name="buildStaticSearch">
+        <description>
+            TARGET buildStaticSearch
+            This target uses the code in the staticSearch folder to create a 
+            static search engine in the output folder.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Building static search..."/>
+        <ant antfile="build.xml" dir="staticSearch">
+            <property name="ssConfig" value="../config_staticSearch.xml"/>
+        </ant>
+    </target>
+    
+    <target name="validateSite">
+        <description>
+            TARGET validateSite
+            This target validates the complete collection of XHTML5 documents 
+            comprising the output site, using the VNU validator (the same validator used by 
+            the W3C's online validation service).
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Validating the HTML pages produced in the build using the VNU validator."/>
+        <java jar="${basedir}/lib/vnu.jar" failonerror="false" fork="true">
+            <arg value="--format text"/>
+            <arg value="--skip-non-html"/>
+            <arg value="--errors-only"/>
+            <arg value="${basedir}/site"/>
+        </java>
+    </target>
+    
+    <target name="lwtaRsyncToLiveServer">
+        <description>
+            TARGET lwtaRsyncToLiveServer
+            This pushes the content up to the publication folder on the nfs.hcmc.uvic.ca server.
+            This will overwrite the existing site. Use with care.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Pushing content up to the live site."/>
+        <exec executable="rsync" dir="${basedir}">
+            <arg value="--stats"/>
+            <arg value="--recursive"/>
+            <arg value="--times"/>
+            <arg value="--verbose"/>
+            <arg value="--delete"/>
+            <arg line="-e ssh"/>
+            <arg line="./output/"/>
+            <arg line="hcmc@nfs.hcmc.uvic.ca:/home1t/hcmc/www/project/lwta/"/>
+        </exec>
+        <!-- NOTE THAT WE MUST USE -\-delete SO THAT OLD staticSearch INDEX FILES ARE PURGED. -->
+    </target>
+    
+    <target name="all">
+        <description>
+            TARGET all
+            This builds the site in the output folder ready for 
+            release.
+        </description>
+        <antcall target="preClean"/>
+        <antcall target="copyTweakedToOutput"/>
+        <antcall target="buildStaticSearch"/>
+        <antcall target="validateSite"/>
+    </target>
+    
+  
+</project>
