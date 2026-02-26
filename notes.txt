@@ -1,0 +1,13 @@
+NOTES
+
+The original site pages were harvested by Greg Newton from the 
+Wayback Machine.
+
+Martin Holmes then massaged these pages into the valid XHTML5 
+version of the site which is in the /original/ folder.
+
+At the request of LS, one page was removed, along with references
+to it, and the results are in the /tweaked/ folder. This folder
+is what will be published pending a modernization, and it will
+then be made available in the form of an archive alongside a 
+modernized version.
