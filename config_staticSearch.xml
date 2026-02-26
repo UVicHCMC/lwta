@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="staticSearch/schema/staticSearch.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="staticSearch/schema/staticSearch.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!--Configuration file file:/home/mholmes/eb11/staticSearch/../config_staticSearch.xml converted to version 2 2026-01-23.-->
+<config xmlns="http://hcmc.uvic.ca/ns/staticSearch" version="2">
+   <params>
+      <searchPage file="output/search.htm"/>
+      <index recurse="true"/>
+      <!--stopwords/@file may need to be changed to use a file in /stopwords/-->
+      <stopwords file="staticSearch/stopwords/stopwords_en.txt"/>
+      <!--dictionary/@file may need to be changed to use a file in /dicts/-->
+      <dictionary file="staticSearch/dicts/words_en.txt"/>
+      <scoringAlgorithm name="raw"/>
+      <stemmer dir="stemmers/en/"/>
+      <tokenizer minWordLength="2"/>
+      <createContexts create="true"
+                      phrasalSearch="true"
+                      wildcardSearch="true"
+                      maxKwicLength="15"
+                      kwicTruncateString="..."/>
+      <results resultsPerPage="200" maxKwicsToShow="5" maxResults="2000"/>
+      <version file="SVNREV"/>
+      <output dir="staticSearch"/>
+   </params>
+   <rules>
+      <rule weight="3" match="h1"/>
+      <rule weight="2" match="h2"/>
+      <rule weight="0" match="script | style"/>
+   </rules>
+   <contexts><!--
+      <context match="article[ancestor::main[@class]]" label="Articles on poets"/>
+      <context match="div[parent::main[not(@class)]]" label="Site page content"/>-->
+   </contexts>
+   <!--<excludes>
+      <exclude match="meta[contains(@name,'Document type')]" type="filter"/>
+      <!-\- Exclude everything that isn't a post. -\->
+      <exclude type="index" match="html[not(descendant::nav[@class='crumbs'])]"/>
+      <exclude match="meta[contains-token(@class,'excludedMeta')]" type="filter"/>
+   </excludes>-->
+</config>
