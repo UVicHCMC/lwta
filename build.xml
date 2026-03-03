@@ -79,6 +79,15 @@
         </java>
     </target>
     
+    <target name="createHtaccess">
+        <description>
+            TARGET createHtaccess
+            The home page for the site is not called index.html, so we 
+            need to override the default behaviour.
+        </description>
+        <echo file="${basedir}/output/.htaccess">#Alternate default index page&#x0a;DirectoryIndex LWTA.htm</echo>
+    </target>
+    
     <target name="lwtaRsyncToLiveServer">
         <description>
             TARGET lwtaRsyncToLiveServer
@@ -110,6 +119,7 @@
         <antcall target="copyTweakedToOutput"/>
         <antcall target="buildStaticSearch"/>
         <antcall target="validateSite"/>
+        <antcall target="createHtaccess"/>
     </target>
     
   
