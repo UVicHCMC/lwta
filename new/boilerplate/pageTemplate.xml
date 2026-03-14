@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>HCMC Journal</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/lwta.css"/>
+        <link rel="icon" type="image/svg+xml" href="lwta_favicon.svg"/>
+        <script src="js/lwta.js"> </script>
+        <script src="js/ssHighlight.js"> </script>
+        <!--<script src="js/sorttable.js"> </script>-->
+    </head>
+    <body>
+        
+        <header>
+            <h1>LWTA</h1>
+            <nav class="mainMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contents.html">Contents</a></li>
+                    <li><a href="siteIndex.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- NOTE: This processing-instruction will be replaced by the document 
+             content. -->
+        <?docContent?>
+        
+        <footer>
+            <div class="acknowledgements">Original site created by Professor Marc A. Grinker. Renewed version created by <a href="https://hcmc.uvic.ca/">UVic HCMC</a></div>
+            <div class="copyright">©1994</div>
+            <div id="buildInfo"></div>
+        </footer>
+    </body>
+    
+</html>

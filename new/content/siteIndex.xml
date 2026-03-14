@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://www.w3.org/1999/xhtml" id="siteIndex">
+  <h2>Index</h2>
+  <section>
+    <ul class="indexLetters">
+      <li><a href="#index_a">a</a></li>
+      <li><a href="#index_b">b</a></li>
+      <li><a href="#index_c">c</a></li>
+      <li><a href="#index_d">d</a></li>
+      <li><a href="#index_e">e</a></li>
+      <li>f</li>
+      <li>g</li>
+      <li><a href="#index_h">h</a></li>
+      <li><a href="#index_i">i</a></li>
+      <li>j</li>
+      <li>k</li>
+      <li><a href="#index_l">l</a></li>
+      <li><a href="#index_m">m</a></li>
+      <li><a href="#index_n">n</a></li>
+      <li>o</li>
+      <li><a href="#index_p">p</a></li>
+      <li><a href="#index_q">q</a></li>
+      <li>r</li>
+      <li><a href="#index_s">s</a></li>
+      <li><a href="#index_t">t</a></li>
+      <li>u</li>
+      <li>v</li>
+      <li>w</li>
+      <li>x</li>
+      <li>y</li>
+      <li>z</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_a">a</h3>
+    <ul>
+      <li><a href="abbreviations.html">Abbreviations</a></li>
+      <li><a href="acknowledgements.html">Acknowledgements</a></li>
+      <li><a href="apostrophes.html">Apostrophes</a></li>
+      <li><a href="articles.html">Articles</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_b">b</h3>
+    <ul>
+      <li><a href="brackets.html">Brackets</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_c">c</h3>
+    <ul>
+      <li><a href="clausesRestrictiveAndNonrestrictive.html">Clauses – Restrictive and Nonrestrictive</a></li>
+      <li><a href="colloquialisms.html">Colloquialisms</a></li>
+      <li><a href="colons.html">Colons</a></li>
+      <li><a href="commas.html">Commas</a></li>
+      <li><a href="compoundAdjectives.html">Abbreviations</a></li>
+      <li><a href="contractions.html">Contractions</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_d">d</h3>
+    <ul>
+      <li><a href="dashes.html">Dashes</a></li>
+      <li><a href="dependentClausesAndPhrases.html">Depended Clauses and Phrases  </a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_e">e</h3>
+    <ul>
+      <li><a href="ellipses.html">Ellipses</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_h">h</h3>
+    <ul>
+      <li><a href="hyphens.html">Hyphens</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_i">i</h3>
+    <ul>
+      <li><a href="introduction.html">Introduction [currently missing]</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_l">l</h3>
+    <ul>
+      <li><a href="legalese.html">Legalese</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_m">m</h3>
+    <ul>
+      <li><a href="modifiers.html">Modifiers</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_n">n</h3>
+    <ul>
+      <li><a href="nominalizationsAndAdjectivizations.html">Nominalizations and Adjectivizations</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_p">p</h3>
+    <ul>
+      <li><a href="parallelism.html">Paralellism</a></li>
+      <li><a href="passiveVoice.html">Passive Voice</a></li>
+      <li><a href="periods.html">Periods</a></li>
+      <li><a href="possessives.html">Possessives</a></li>
+      <li><a href="pronouns.html">Pronouns</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_q">q</h3>
+    <ul>
+      <li><a href="quotationIncorporation.html">Quotation Incorporation</a></li>
+      <li><a href="quotationMarks.html">Quotation Marks</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_s">s</h3>
+    <ul>
+      <li><a href="semicolons.html">Semicolons</a></li>
+      <li><a href="sentenceStructure.html">Sentence Structure</a></li>
+      <li><a href="spacing.html">Spacing</a></li>
+      <li><a href="subjectVerbAgreement.html">Subject Verb Agreement</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 id="index_t">t</h3>
+    <ul>
+      <li><a href="thatVersusWhich.html">That Versus Which</a></li>
+      <li><a href="throatClearingPhrases.html">Throat Clearing Phrases</a></li>
+    </ul>
+  </section>
+
+
+</article>
